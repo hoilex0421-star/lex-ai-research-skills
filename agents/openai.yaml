@@ -1,0 +1,5 @@
+interface:
+  display_name: "Huawei Insight Deck"
+  short_description: "华为风格洞察型研究PPT模板"
+  default_prompt: "Use $huawei-insight-deck to create a data-rigorous executive research one-pager."
+
