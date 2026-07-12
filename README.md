@@ -2,6 +2,13 @@
 
 `huawei-insight-deck` 是一个给 Codex 使用的 PPT 研究页技能，用来快速生成 **华为/咨询公司风格的克制红 16:9 高管汇报页**。它适合把市场判断、技术路线、竞品对比、趋势脉络等材料，整理成一页可直接放进汇报 deck 的结构化 PPT。
 
+本仓库同时提供两个可独立调用的技能：
+
+- `$huawei-insight-deck`：生成华为风格的单页洞察、市场分析和技术叙事页面。
+- `$tech-research-deck`：基于文章和互联网研究，生成完整的技术研究阅读型 PPT。
+
+`tech-research-deck` 的页面正文默认不使用不必要的引号，顶部结论条统一标注为“洞察”。
+
 这个 skill 的目标不是只把页面做得好看，而是把页面做成：
 
 - **结论先行**：标题直接给判断和关键数字，不写空泛主题。
@@ -99,12 +106,14 @@ Clone this repository into your Codex skills directory:
 ```bash
 mkdir -p ~/.codex/skills
 git clone https://github.com/hoilex0421-star/Huazi-ppt-skill.git ~/.codex/skills/huawei-insight-deck
+ln -s ~/.codex/skills/huawei-insight-deck/skills/tech-research-deck ~/.codex/skills/tech-research-deck
 ```
 
-Then restart Codex or open a new thread. Use the skill as:
+Then restart Codex or open a new thread. Use either skill as:
 
 ```text
 $huawei-insight-deck
+$tech-research-deck
 ```
 
 ## Contents
@@ -113,6 +122,7 @@ $huawei-insight-deck
 - `references/` - layout, archetype, and data-rigor references
 - `scripts/` - helper library and runnable examples
 - `agents/` - agent configuration
+- `skills/tech-research-deck/` - complete technical research deck skill
 
 ## 使用建议
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tech Research Deck"
+  short_description: "梳理技术架构路线趋势和算力启示的研究PPT"
+  default_prompt: "Use $tech-research-deck to structure this technology topic into a research-style reading deck."
