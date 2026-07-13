@@ -1,136 +1,155 @@
-# Huazi PPT Skill
+# Lex AI Research Skills
 
-`huawei-insight-deck` 是一个给 Codex 使用的 PPT 研究页技能，用来快速生成 **华为/咨询公司风格的克制红 16:9 高管汇报页**。它适合把市场判断、技术路线、竞品对比、趋势脉络等材料，整理成一页可直接放进汇报 deck 的结构化 PPT。
+**Research is a system, not a document.**
 
-本仓库同时提供两个可独立调用的技能：
+[English](README.md) | [简体中文](README.zh-CN.md)
 
-- `$huawei-insight-deck`：生成华为风格的单页洞察、市场分析和技术叙事页面。
-- `$tech-research-deck`：基于文章和互联网研究，生成完整的技术研究阅读型 PPT。
+A library of reusable Codex skills for industrial research, technology analysis, evidence organization, and executive communication. It packages a personal research method into installable workflows that can be used independently or combined from question framing through editable presentation delivery.
 
-`tech-research-deck` 的页面正文默认不使用不必要的引号，顶部结论条统一标注为“洞察”。
+## Available Skills
 
-这个 skill 的目标不是只把页面做得好看，而是把页面做成：
+| Skill | Purpose | Best for | Main output |
+| --- | --- | --- | --- |
+| `tech-research-deck` | Structures a research problem, verifies evidence, decomposes architectures and technical routes, compares representative cases, and develops defensible trend judgments. | Technology landscapes, industrial value chains, route comparisons, system architecture, product or paper analysis, data and infrastructure implications, and forward-looking research. | A source-aware, slide-ready research narrative with architecture maps, route decompositions, same-field comparisons, case evidence, trend judgments, and page-level claims. |
+| `huawei-insight-deck` | Turns established judgments into consistent, editable, executive-readable pages using a restrained visual system, reusable layout components, and render QA. | Dense reading slides, executive one-pagers, comparison tables, route diagrams, evidence cards, page polishing, and final presentation production. | An editable 16:9 PowerPoint deck with consistent page structure, native elements, source notes, and visually inspected renders. |
 
-- **结论先行**：标题直接给判断和关键数字，不写空泛主题。
-- **数据可回溯**：每个数字都要求有口径、对象、来源，来源放脚注或 speaker notes。
-- **一页讲清楚**：左侧图表/流程承载核心证据，右侧卡片/表格承载同字段对比。
-- **可编辑 PPT**：使用 PowerPoint 原生形状、文字、表格、图表，后续可以继续改。
+`tech-research-deck` owns the research question, evidence, architecture, routes, cases, and trends. `huawei-insight-deck` owns the conversion of an established argument into consistent, editable pages for executive reading. Each skill can be used on its own, or they can be chained when a task needs both research development and presentation production.
 
-## 使用后的效果
+## Why This Repository Exists
 
-使用这个 skill 后，Codex 会优先生成两类完整页面。
+Reusable research quality does not come from a single prompt. It comes from a repeatable method for framing the question, collecting and qualifying evidence, comparing alternatives on consistent dimensions, writing a clear claim for each page, and checking the rendered result before delivery.
 
-### A. 市场 / 洞察论点页
+This repository makes that method explicit. The skills preserve the decisions that are easy to lose between projects: where the research boundary sits, what counts as sufficient evidence, which comparison fields remain stable, how facts are separated from analyst judgment, and how a page is validated after construction. The result is a working library for producing research that is easier to inspect, update, and communicate.
 
-适合回答：“这个市场多大、谁在买、怎么打、增长拐点在哪里？”
-
-典型页面结构：
+## How It Works
 
 ```text
-论点型标题：2030 保守/乐观市场空间、CAGR、关键判断
-洞察启示：2 条结论先行 bullet
-左侧：市场空间图、结构占比图、增长曲线或堆叠柱
-右侧：同字段比较卡片，例如 TAM / 客户画像 / 选型分档 / 竞品横评
-底部：口径说明、来源、结论 band
+source material
+  -> research framing
+  -> evidence and source verification
+  -> architecture and route decomposition
+  -> page-level claims
+  -> slide construction
+  -> render and visual QA
+  -> editable PPT output
 ```
 
-可用于：
+- **Claim-first:** each page starts with the conclusion it must establish. Evidence, diagrams, and comparisons are selected to support that claim rather than accumulated without hierarchy.
+- **Traceability:** important facts, numbers, benchmark results, and company statements retain their source, date, object, and measurement context. Confirmed facts remain distinct from analyst judgment.
+- **Same-field comparison:** competing routes, products, cases, or scenarios are compared using the same dimensions so that differences are meaningful rather than rhetorical.
+- **Editable delivery:** final pages use native PowerPoint text, shapes, tables, and charts wherever practical. The deck remains usable after delivery instead of becoming a set of flattened images.
 
-- 市场空间 / TAM 测算
-- 保守 vs 乐观情景
-- 客户画像和采购分层
-- 产品高中低档选型
-- 竞品横向对比
-- 应用场景结构占比
-- 成本下降或商业模式拐点
+## Quick Start
 
-示例请求：
+Use the research skill when the question is still being defined or the evidence and technical structure need to be developed:
 
 ```text
-$huawei-insight-deck
-按华为那个模板做一页，主题是具身智能一体机市场空间：
-左边画 2025-2030 市场规模增长，右边做保守/中性/乐观三种场景卡片，
-每个数字都标来源。
-```
-
-### B. 技术研究叙事页
-
-适合回答：“这项技术怎么演进、路线怎么分、不同方案如何选？”
-
-典型页面结构：
-
-```text
-论点型标题：技术路线判断
-中部主体：时间线 / 框架流程 / 显式vs隐式路线 / 选型表 / 案例页
-底部：红色结论 band，总结技术节奏、路线取舍或算力含义
-```
-
-可用于：
-
-- 学术界 / 产业界发展时间线
-- 技术框架和输入-方法-输出流程
-- 显式路线 vs 隐式路线对比
-- 模型、系统、芯片、平台选型表
-- 代表论文、团队、产品案例页
-
-示例请求：
-
-```text
-$huawei-insight-deck
-做一页技术路线页，比较机器人世界模型的显式建模路线和隐式生成路线：
-中间放两条流程，下面做对比表，字段包括可编辑性、物理真实、泛化、算力、代表工作。
-```
-
-## 页面风格
-
-- 画布：16:9，适合 PowerPoint 汇报。
-- 主色：克制红 `#C7000B`，用于标题重点、结论、关键数字。
-- 字体：微软雅黑，适合中文商业汇报。
-- 版式：白底、浅灰边框、红色强调，不做花哨渐变。
-- 图表：优先使用清晰的趋势线、堆叠柱、对比表、流程框。
-- 信息密度：面向高管阅读，一页只讲一个核心判断。
-
-## 适合谁用
-
-这个 skill 更适合研究员、战略分析、产品规划、算力/AI 产业分析场景，尤其适合：
-
-- 需要把零散材料压缩成一页洞察页
-- 需要把技术路线讲成管理层能看懂的结构
-- 需要每个数字和判断都能追溯来源
-- 需要输出可编辑 PPT，而不是一张不可改的图片
-
-## 安装
-
-Clone this repository into your Codex skills directory:
-
-```bash
-mkdir -p ~/.codex/skills
-git clone https://github.com/hoilex0421-star/Huazi-ppt-skill.git ~/.codex/skills/huawei-insight-deck
-ln -s ~/.codex/skills/huawei-insight-deck/skills/tech-research-deck ~/.codex/skills/tech-research-deck
-```
-
-Then restart Codex or open a new thread. Use either skill as:
-
-```text
-$huawei-insight-deck
 $tech-research-deck
 ```
 
-## Contents
+Use the presentation skill when the argument already exists and needs to become a consistent, executive-readable deck or one-pager:
 
-- `SKILL.md` - skill trigger rules and workflow
-- `references/` - layout, archetype, and data-rigor references
-- `scripts/` - helper library and runnable examples
-- `agents/` - agent configuration
-- `skills/tech-research-deck/` - complete technical research deck skill
+```text
+$huawei-insight-deck
+```
 
-## 使用建议
+For an end-to-end assignment, start with `$tech-research-deck` to establish the research structure and page claims, then use `$huawei-insight-deck` to construct, render, inspect, and deliver the editable presentation.
 
-为了得到更好的页面，请在请求里尽量提供：
+## Installation
 
-- 主题和目标读者，例如“给 SP 战略汇报用”
-- 想做的页面类型，例如“市场空间页 / 技术路线页 / 竞品对比页”
-- 已知数据、来源链接、口径说明
-- 你希望保留的结论或判断
+### Symlink installation
 
-如果没有完整数据，Codex 会先帮你补研究和口径，再按模板出页。
+Symlinks keep the installed skills connected to the cloned repository, so repository updates are immediately available in Codex.
+
+```bash
+git clone https://github.com/hoilex0421-star/lex-ai-research-skills.git
+cd lex-ai-research-skills
+mkdir -p ~/.codex/skills
+ln -s "$PWD/skills/huawei-insight-deck" ~/.codex/skills/huawei-insight-deck
+ln -s "$PWD/skills/tech-research-deck" ~/.codex/skills/tech-research-deck
+```
+
+### Direct copy
+
+Use direct copies when the installed skills should remain independent of the cloned repository.
+
+```bash
+mkdir -p ~/.codex/skills
+cp -R skills/huawei-insight-deck ~/.codex/skills/huawei-insight-deck
+cp -R skills/tech-research-deck ~/.codex/skills/tech-research-deck
+```
+
+Restart Codex or open a new task after installation so the skills are discovered.
+
+## Usage Examples
+
+### Technology research
+
+```text
+$tech-research-deck
+Build an executive research deck on embodied AI data infrastructure. Define the industry boundary, map the value chain from collection and teleoperation to processing, simulation, evaluation, and delivery, compare real-world and synthetic-data routes on consistent dimensions, identify representative companies and projects with traceable sources, and conclude with evidence-based implications for model training and AI infrastructure through 2028.
+```
+
+### Executive presentation production
+
+```text
+$huawei-insight-deck
+Turn the approved embodied AI data infrastructure research outline into an editable 16:9 executive reading deck. Use one claim per page, a restrained red visual system, native PowerPoint elements, concise source notes, and consistent comparison layouts. Render the full deck, inspect every page for clipping, overlap, hierarchy, and source readability, then deliver the editable PPTX.
+```
+
+## Case Gallery
+
+### Embodied Data Industry Research: From Data Factories to Physical AI Infrastructure
+
+This is a real output example produced with the research and presentation workflow in this repository. It demonstrates how a broad industrial question can be turned into an evidence-led narrative, a structured industry model, an operating workflow, and a forward outlook. The source PPTX is not provided for download.
+
+| Research framing | Industry architecture |
+| --- | --- |
+| ![Research framing: the scope and central thesis of the embodied data industry research](assets/cases/embodied-data-industry/cover.png) | ![Industry architecture: the embodied data value chain and infrastructure layers](assets/cases/embodied-data-industry/industry-chain.png) |
+| **Research framing:** defines the research boundary, audience, and central question. | **Industry architecture:** maps the participants, layers, and value flow across the industry. |
+
+| Operating workflow | Forward outlook |
+| --- | --- |
+| ![Operating workflow: how an embodied data factory collects, processes, validates, and delivers data](assets/cases/embodied-data-industry/data-factory-workflow.png) | ![Forward outlook: evidence-based development outlook for the embodied data industry from 2026 to 2028](assets/cases/embodied-data-industry/outlook-2026-2028.png) |
+| **Operating workflow:** explains how a data factory turns collection into validated training assets. | **Forward outlook:** summarizes the expected transition toward physical AI infrastructure from 2026 to 2028. |
+
+## Repository Structure
+
+```text
+lex-ai-research-skills/
+├── README.md
+├── README.zh-CN.md
+├── assets/
+│   └── cases/
+│       └── embodied-data-industry/
+│           ├── cover.png
+│           ├── industry-chain.png
+│           ├── data-factory-workflow.png
+│           └── outlook-2026-2028.png
+└── skills/
+    ├── huawei-insight-deck/
+    │   ├── SKILL.md
+    │   ├── agents/
+    │   ├── references/
+    │   └── scripts/
+    └── tech-research-deck/
+        ├── SKILL.md
+        ├── agents/
+        └── references/
+```
+
+Each skill is self-contained. Its `SKILL.md` defines when to use it and how the workflow operates; supporting references hold detailed research or layout rules; scripts provide deterministic presentation helpers where production requires them.
+
+## Quality Principles
+
+- **Claim-first pages:** one page carries one defensible argument, stated before supporting detail.
+- **Evidence traceability:** material facts and numbers preserve their source, date, scope, and measurement context; source notes remain connected to the claim they support.
+- **Consistent comparison dimensions:** routes, products, companies, and cases are evaluated using identical fields wherever a direct comparison is intended.
+- **Direct body copy:** body text avoids unnecessary quotation marks. Quotation marks are reserved for verbatim language, official terms, or wording that is itself under analysis.
+- **Standard conclusion label:** the top conclusion strip is labeled `洞察`, not `核心判断`.
+- **Editable PowerPoint:** text, shapes, tables, and charts remain editable so the output can be reviewed and revised after delivery.
+- **Render QA:** every completed deck is rendered and visually inspected for overlap, clipping, alignment, hierarchy, image placement, and source-note readability.
+
+## What Comes Next
+
+The library will continue to add reusable skills for research, analysis, and communication as the underlying methods become stable enough to package and maintain.
