@@ -47,7 +47,7 @@
 $tech-research-deck
 ```
 
-当核心判断已经形成，需要制作成一致的高管报告或单页时，调用演示技能：
+当核心论点已经形成，需要制作成一致的高管报告或单页时，调用演示技能：
 
 ```text
 $huawei-insight-deck
@@ -123,20 +123,20 @@ $huawei-insight-deck
 
 <table>
   <tr>
-    <td><img src="assets/cases/embodied-data-industry/cover.png" alt="具身数据产业研究封面"></td>
-    <td><img src="assets/cases/embodied-data-industry/industry-chain.png" alt="具身数据产业链与基础设施层级"></td>
+    <td width="50%"><img src="assets/cases/embodied-data-industry/cover.png" alt="具身数据产业研究封面"></td>
+    <td width="50%"><img src="assets/cases/embodied-data-industry/industry-chain.png" alt="具身数据产业链与基础设施层级"></td>
   </tr>
   <tr>
-    <td><strong>研究定调</strong></td>
-    <td><strong>产业架构</strong></td>
+    <td><strong>研究定调</strong><br>界定研究边界，呈现具身数据从数据生产走向物理 AI 基础设施的核心命题。</td>
+    <td><strong>产业架构</strong><br>梳理产业链结构及具身数据层在其中的位置。</td>
   </tr>
   <tr>
-    <td><img src="assets/cases/embodied-data-industry/data-factory-workflow.png" alt="具身数据工厂运营流程"></td>
-    <td><img src="assets/cases/embodied-data-industry/outlook-2026-2028.png" alt="具身数据产业 2026 至 2028 年趋势展望"></td>
+    <td width="50%"><img src="assets/cases/embodied-data-industry/data-factory-workflow.png" alt="具身数据工厂运营流程"></td>
+    <td width="50%"><img src="assets/cases/embodied-data-industry/outlook-2026-2028.png" alt="具身数据产业 2026 至 2028 年趋势展望"></td>
   </tr>
   <tr>
-    <td><strong>运营流程</strong></td>
-    <td><strong>趋势展望</strong></td>
+    <td><strong>运营流程</strong><br>把数据工厂拆解为可检查、可比较的端到端流程。</td>
+    <td><strong>趋势展望</strong><br>基于证据形成 2026-2028 年分阶段产业判断。</td>
   </tr>
 </table>
 
