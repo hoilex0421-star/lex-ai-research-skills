@@ -576,25 +576,37 @@ git -C "$MAIN_ROOT" push -u origin main
 
 Expected: the local `main` branch is synchronized with `origin/main`.
 
-- [ ] **Step 5: Verify the renamed repository**
+- [ ] **Step 5: Update the repository description**
+
+Run:
+
+```bash
+gh repo edit hoilex0421-star/lex-ai-research-skills \
+  --description "Reusable Codex skills for technology research, evidence-led analysis, and editable executive presentations. English / 中文."
+```
+
+Expected: the public repository description matches the bilingual AI research skill library positioning.
+
+- [ ] **Step 6: Verify the renamed repository**
 
 Run:
 
 ```bash
 gh repo view hoilex0421-star/lex-ai-research-skills --json name,url,description,defaultBranchRef
 git -C "$MAIN_ROOT" status --short
-git -C "$MAIN_ROOT" log -6 --oneline --decorate
+git -C "$MAIN_ROOT" log -15 --oneline --decorate
 ```
 
 Expected:
 
 - Repository name is `lex-ai-research-skills`.
 - URL is `https://github.com/hoilex0421-star/lex-ai-research-skills`.
+- Description matches the bilingual AI research skill library positioning.
 - Default branch is `main`.
 - Git status is clean.
 - Recent commits include the design spec, structure migration, gallery, and both README commits.
 
-- [ ] **Step 6: Verify a fresh clone**
+- [ ] **Step 7: Verify a fresh clone**
 
 Run:
 
