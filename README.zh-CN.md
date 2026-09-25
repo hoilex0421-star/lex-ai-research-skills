@@ -1,4 +1,4 @@
-# Technical research PPT Skill - Huawei style
+# Technical research PPT Skill - Huawei style(华为风格PPT)
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
