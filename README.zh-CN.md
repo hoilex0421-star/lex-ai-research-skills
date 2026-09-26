@@ -130,6 +130,22 @@ $huawei-insight-deck
 
 [下载 8 页可编辑样张](assets/official-style/official-template-example.pptx) · [查看 PDF](assets/official-style/official-template-example.pdf) · [生成与复用方法](skills/huawei-insight-deck/references/production.md) · [验证记录](assets/official-style/validation.md)
 
+### 42 种页型：每种一页代表性示例
+
+按 SeanDongX 的 **H01–H42** 完整制作，内容覆盖图文证据、时间线、柱线组合、圆环、团队、地图、商业模式、甘特图和人机协作。继续使用同一官方模板，增加内容结构的多样性。
+
+[浏览全部 42 页](assets/layout-atlas/README.md) · [下载可编辑 PPTX](assets/layout-atlas/huawei-layout-atlas-42.pptx) · [查看 PDF](assets/layout-atlas/huawei-layout-atlas-42.pdf) · [页型目录与用法](skills/huawei-insight-deck/references/layout-atlas.md)
+
+| H13 五图说明条 | H16 柱线组合 |
+| --- | --- |
+| ![H13](assets/layout-atlas/H13.png) | ![H16](assets/layout-atlas/H16.png) |
+| H21 地图点位 | H39 组织协议 |
+| ![H21](assets/layout-atlas/H21.png) | ![H39](assets/layout-atlas/H39.png) |
+
+42 页按页型编号排列，H10 结束页保留在第 10 页。含 8 个原生图表及数据工作簿、6 张原生表格，文字和机制图可编辑。数据、报价、人物、访谈与案例为演示示例，照片为 AI 场景示意，不能替代业务证据。
+
+### 基础 8 页样张
+
 | 官方封面 | 官方目录作章节导航 |
 | --- | --- |
 | ![官方封面](assets/official-style/01-cover.png) | ![章节导航](assets/official-style/02-navigation.png) |

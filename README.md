@@ -129,6 +129,27 @@ The default is the [official Huawei light 16:9 template, 2021](https://e.huawei.
 
 [Editable eight-slide sample](assets/official-style/official-template-example.pptx) · [PDF preview](assets/official-style/official-template-example.pdf) · [Reproduction guide](skills/huawei-insight-deck/references/production.md) · [Validation record](assets/official-style/validation.md)
 
+### 42 layouts, one representative slide each
+
+The complete **H01–H42** atlas follows SeanDongX's page-type catalog while keeping
+the same official template. It adds varied photo, timeline, chart, map, commercial,
+planning and human–agent collaboration examples.
+
+[Browse all 42 slides](assets/layout-atlas/README.md) · [Editable PPTX](assets/layout-atlas/huawei-layout-atlas-42.pptx) · [PDF](assets/layout-atlas/huawei-layout-atlas-42.pdf) · [Layout catalog](skills/huawei-insight-deck/references/layout-atlas.md)
+
+| H13 Captioned image strip | H16 Combo chart |
+| --- | --- |
+| ![H13](assets/layout-atlas/H13.png) | ![H16](assets/layout-atlas/H16.png) |
+| H21 Map locations | H39 Organization protocol |
+| ![H21](assets/layout-atlas/H21.png) | ![H39](assets/layout-atlas/H39.png) |
+
+The catalog preserves numbering, including the closing layout at H10. It contains
+eight native charts with embedded data workbooks, six native tables, and editable
+text/mechanism diagrams. Data, pricing, people, interviews and cases are illustrative;
+photos are AI-generated scene examples, not business evidence.
+
+### Basic eight-slide sample
+
 | Official cover | Contents as section navigation |
 | --- | --- |
 | ![Cover](assets/official-style/01-cover.png) | ![Navigation](assets/official-style/02-navigation.png) |

@@ -38,6 +38,8 @@ Its exact file and hash are pinned in `assets/official-template.json`.
 
 Read [official-template-spec.md](references/official-template-spec.md) before authoring.
 Select content arrangements from [template-archetypes.md](references/template-archetypes.md).
+For visual selection, use the [H01–H42 atlas](references/layout-atlas.md): one
+representative slide per community page type, with editable PPTX and previews.
 Qualify facts using [data-rigor-and-caveats.md](references/data-rigor-and-caveats.md).
 
 ## Build and inspect
@@ -64,6 +66,9 @@ Qualify facts using [data-rigor-and-caveats.md](references/data-rigor-and-caveat
 The [example spec](assets/example-deck.json) contains illustrative analysis and
 proposed validation, with no fabricated benchmark or partner commitments.
 The repository README links the rendered gallery and editable sample.
+The 42-page atlas adds photo grids, native data charts, market/budget arithmetic,
+team profiles, governance and organization mechanisms. Its numbers and scenarios
+are illustrative; replace them with supported project content before delivery.
 
 ## Legacy boundary
 

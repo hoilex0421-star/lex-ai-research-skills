@@ -7,6 +7,7 @@ Uses only Python's standard library; does not reserialize masters or source artw
 """
 import argparse
 import copy
+import hashlib
 import json
 import posixpath
 from pathlib import Path
@@ -126,10 +127,19 @@ def assemble(template, content, spec_path, output):
         if not any(c.get('PartName') == '/' + part for c in ct):
             E.SubElement(ct, q('ct:Override'), PartName='/' + part, ContentType=content_type)
 
+    imported_media = {}
+
     def import_part(part):
         new = 'ppt/lex-content/' + part
         if new in result:
             return new
+        # Repeated image placements keep their own crops but share identical bytes.
+        is_image = part.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.webp', '.svg'))
+        digest = hashlib.sha256(donor[part]).hexdigest() if is_image else None
+        if digest in imported_media:
+            return imported_media[digest]
+        if is_image:
+            imported_media[digest] = new
         result[new] = donor[part]
         override = next((c.get('ContentType') for c in donor_ct if c.get('PartName') == '/' + part), None)
         if override:

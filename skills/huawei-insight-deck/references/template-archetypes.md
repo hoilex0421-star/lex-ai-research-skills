@@ -3,6 +3,10 @@
 Choose by the relationship the reader needs to understand. These research
 structures are not extra Huawei masters. Keep official title/body/footer regions.
 
+For a wider visual vocabulary, browse [all 42 page types](layout-atlas.md).
+Each type has its own representative slide; use photo, chart, timeline, map,
+comparison and mechanism structures to avoid repeating simple cards.
+
 | Structure | Best question | Native content | Density decision |
 | --- | --- | --- | --- |
 | Architecture | What changes in the system? | Layers, modules, explicit data/control paths | 3–5 layers; split mechanism detail |
