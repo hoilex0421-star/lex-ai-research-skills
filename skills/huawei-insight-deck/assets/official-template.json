@@ -1,0 +1,14 @@
+{
+  "title": "华为 PPT模板-浅色版16-9（2021年版本）",
+  "source_page": "https://e.huawei.com/cn/documents/others/4f951fb72e1944288d3aa73bf40d8a8b",
+  "download_url": "https://e-file.huawei.com/marketingcloud/pep/asset/20000001/Material/4f951fb72e1944288d3aa73bf40d8a8b/R1S547D001220070202103221424154835361/PPT%E6%A8%A1%E6%9D%BF-%E6%B5%85%E8%89%B2%E7%89%8816-9.pptx",
+  "sha256": "c6f6cc8245ebec463396f1b35fe2700c34dc85edfd2836509cdbdd7e23f00127",
+  "slide_size_emu": [12196763, 6858000],
+  "reference_slides": {"cover": 1, "contents": 2, "body": 3, "chart_color_reference_only": 4, "end": 5},
+  "body_region_emu": [736908, 1501989, 10733557, 4690459],
+  "font": "Microsoft YaHei",
+  "title_pt": 32,
+  "body_pt": 18,
+  "secondary_pt": 12.99,
+  "notes": "No separate chapter master exists. Reuse the contents page for chapter navigation. Preserve source master/layout/theme/media bytes; do not treat community styles as official. Source artwork and marks belong to Huawei; this repository is not an official Huawei product."
+}

@@ -7,7 +7,7 @@ description: >-
   发展趋势、路线演进、技术全景、产业技术研究、技术研究页、算力启示,
   or to turn papers, product notes, screenshots, or fragmented technical opinions
   into a dense Chinese reading PPT. Pair with huawei-insight-deck for the final
-  restrained-red slide style and render-QA; switch to investment-recommendation-deck
+  official-template slide production and render-QA; switch to investment-recommendation-deck
   when the task becomes company-specific investment judgement.
 ---
 
@@ -114,20 +114,25 @@ For a short one-page explanation, use only:
 - Rewrite emphasis as a direct statement instead of wrapping phrases in Chinese
   or English quotation marks. For example, use
   `具身数据已成为独立赛道，但规模化供给尚未等于可持续盈利`.
-- Label the top-of-page conclusion or takeaway strip `洞察`, not `核心判断`.
+- Put the central claim in the title. An extra takeaway is optional; if needed,
+  label it `洞察` and place it inside the official body region without duplicating the title.
 
 ## Visual Encoding Rules
 
-- Treat `$huawei-insight-deck` as the visual source of truth and enforce its
-  hard ceiling of three non-neutral theme colors on every slide.
-- Default to red for the primary claim and judgement, navy for supporting
-  structure or publicly verified evidence, and grayscale for neutral analysis.
-- Use green or amber only as the third color for one stable semantic role, such
-  as a route distinction, positive status, risk, or pending verification.
-- Do not assign different hues to each route, person, company, stage, module, or
-  card. Differentiate peers with position, labels, line style, fill tint, or
-  typography before introducing another color.
-- Run the theme-color audit and render every slide before delivery.
+- Use `$huawei-insight-deck` as the visual source of truth. Its pinned official
+  Huawei 2021 light template governs cover, contents/section navigation, body,
+  ending, typography, geometry, color and footer.
+- Use the original black claim title. Red highlights differentiating evidence or
+  key nodes within the body; do not impose red titles, navy structure, green status,
+  decorative cards, a compulsory insight strip or a bottom conclusion bar.
+- State source caliber in words: public evidence, vendor-reported result,
+  inference/estimate, proposed validation, or target-platform measurement.
+- In compute work, connect capability change → workload variable → system need →
+  verification opportunity. Bind performance comparisons to model/version, input,
+  precision, batch, software/platform and quality target.
+- Public results are not target-platform measurements. Keep proposed collaboration,
+  resourcing and acceptance thresholds visibly conditional until confirmed.
+- Preserve native editable content and render every page before delivery.
 
 ## References
 

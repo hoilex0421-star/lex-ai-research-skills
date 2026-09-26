@@ -61,7 +61,8 @@ For an end-to-end assignment, start with `$tech-research-deck` to establish the 
 
 - Codex with local skill discovery enabled.
 - Git for cloning and updating the library.
-- Python 3 and `python-pptx` when running the optional PowerPoint helper scripts and examples included with `huawei-insight-deck`.
+- Python 3 standard library for official-template fetch, assembly and checks. The optional sample builder uses Node.js and Codex’s bundled `@oai/artifact-tool`, with reference fonts available locally.
+- Another native PPTX editor can supply body content when that runtime is unavailable. Only historical scripts require `python-pptx`.
 - LibreOffice and Poppler are optional but useful for local slide rendering and visual QA. Codex may also provide equivalent presentation tooling in its runtime.
 
 ### Common setup
@@ -119,14 +120,55 @@ Build an executive research deck on embodied AI data infrastructure. Define the 
 
 ```text
 $huawei-insight-deck
-Turn the approved embodied AI data infrastructure research outline into an editable 16:9 executive reading deck. Use one claim per page, a restrained red visual system, native PowerPoint elements, concise source notes, and consistent comparison layouts. Render the full deck, inspect every page for clipping, overlap, hierarchy, and source readability, then deliver the editable PPTX.
+Turn the approved embodied AI data infrastructure research outline into an editable 16:9 executive reading deck. Use one claim per page, the pinned official Huawei 2021 light template for cover, contents/section navigation, body and ending, native PowerPoint elements, concise source notes, and consistent comparison layouts. Render the full deck, inspect every page for clipping, overlap, hierarchy, and source readability, then deliver the editable PPTX.
 ```
 
-## Case Gallery
+## Official Template and Visual Gallery
+
+The default is the [official Huawei light 16:9 template, 2021](https://e.huawei.com/cn/documents/others/4f951fb72e1944288d3aa73bf40d8a8b). Cover, contents, body and ending reuse its actual shell. It has no separate chapter master: the contents layout serves as section navigation, with an optional red current item added by this library.
+
+[Editable eight-slide sample](assets/official-style/official-template-example.pptx) · [PDF preview](assets/official-style/official-template-example.pdf) · [Reproduction guide](skills/huawei-insight-deck/references/production.md) · [Validation record](assets/official-style/validation.md)
+
+### 42 layouts, one representative slide each
+
+The complete **H01–H42** atlas follows SeanDongX's page-type catalog while keeping
+the same official template. It adds varied photo, timeline, chart, map, commercial,
+planning and human–agent collaboration examples.
+
+[Browse all 42 slides](assets/layout-atlas/README.md) · [Editable PPTX](assets/layout-atlas/huawei-layout-atlas-42.pptx) · [PDF](assets/layout-atlas/huawei-layout-atlas-42.pdf) · [Layout catalog](skills/huawei-insight-deck/references/layout-atlas.md)
+
+| H13 Captioned image strip | H16 Combo chart |
+| --- | --- |
+| ![H13](assets/layout-atlas/H13.png) | ![H16](assets/layout-atlas/H16.png) |
+| H21 Map locations | H39 Organization protocol |
+| ![H21](assets/layout-atlas/H21.png) | ![H39](assets/layout-atlas/H39.png) |
+
+The catalog preserves numbering, including the closing layout at H10. It contains
+eight native charts with embedded data workbooks, six native tables, and editable
+text/mechanism diagrams. Data, pricing, people, interviews and cases are illustrative;
+photos are AI-generated scene examples, not business evidence.
+
+### Basic eight-slide sample
+
+| Official cover | Contents as section navigation |
+| --- | --- |
+| ![Cover](assets/official-style/01-cover.png) | ![Navigation](assets/official-style/02-navigation.png) |
+| Architecture | Validation flow |
+| ![Architecture](assets/official-style/03-architecture.png) | ![Flow](assets/official-style/04-flow.png) |
+| Like-for-like comparison | Evidence and inference |
+| ![Comparison](assets/official-style/05-comparison.png) | ![Evidence](assets/official-style/06-evidence.png) |
+| Joint validation plan | Official ending |
+| ![Validation](assets/official-style/07-validation.png) | ![Ending](assets/official-style/08-ending.png) |
+
+Content is illustrative methodology and proposed validation, not measured performance or agreed partnerships. New text, diagrams and two tables are native editable objects; official background artwork remains an image.
+
+[SeanDongX/guizang-ppt-skill](https://github.com/SeanDongX/guizang-ppt-skill) informs content organization only. No implementation/assets are copied, and its visual style does not override the official source. Original artwork, marks and source wording belong to Huawei. This library and sample are not official Huawei publications and imply no endorsement.
+
+## Historical Case Gallery
 
 ### Embodied Data Industry Research: From Data Factories to Physical AI Infrastructure
 
-This is a real output example produced with the research and presentation workflow in this repository. It demonstrates how a broad industrial question can be turned into an evidence-led narrative, a structured industry model, an operating workflow, and a forward outlook. The source PPTX is not provided for download.
+This historical example uses the previous custom reading-deck style, not the current official-template specification. It is a real output produced with the research and presentation workflow in this repository. It demonstrates how a broad industrial question can be turned into an evidence-led narrative, a structured industry model, an operating workflow, and a forward outlook. The source PPTX is not provided for download.
 
 | Research framing | Industry architecture |
 | --- | --- |
@@ -145,6 +187,7 @@ lex-ai-research-skills/
 ├── README.md
 ├── README.zh-CN.md
 ├── assets/
+│   ├── official-style/  # Current sample, previews and validation
 │   └── cases/
 │       └── embodied-data-industry/
 │           ├── cover.png
@@ -155,6 +198,7 @@ lex-ai-research-skills/
     ├── huawei-insight-deck/
     │   ├── SKILL.md
     │   ├── agents/
+    │   ├── assets/  # Official-source manifest and example content
     │   ├── references/
     │   └── scripts/
     └── tech-research-deck/
@@ -171,7 +215,7 @@ Each skill can be installed and invoked independently. Its `SKILL.md` defines wh
 - **Evidence traceability:** material facts and numbers preserve their source, date, scope, and measurement context; source notes remain connected to the claim they support.
 - **Consistent comparison dimensions:** routes, products, companies, and cases are evaluated using identical fields wherever a direct comparison is intended.
 - **Direct body copy:** body text avoids unnecessary quotation marks. Quotation marks are reserved for verbatim language, official terms, or wording that is itself under analysis.
-- **Standard conclusion label:** the top conclusion strip is labeled `洞察` (Insight), not `核心判断` (Core Judgment).
+- **Official visual rules:** preserve source masters, fonts, positions and footers. The title carries the claim; additional insight or conclusion strips are optional.
 - **Editable PowerPoint:** text, shapes, tables, and charts remain editable so the output can be reviewed and revised after delivery.
 - **Render QA:** every completed deck is rendered and visually inspected for overlap, clipping, alignment, hierarchy, image placement, and source-note readability.
 

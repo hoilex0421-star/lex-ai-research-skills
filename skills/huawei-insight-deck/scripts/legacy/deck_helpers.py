@@ -1,3 +1,4 @@
+# LEGACY: custom reading-deck style; not the official Huawei template workflow.
 # -*- coding: utf-8 -*-
 """
 deck_helpers.py — reusable python-pptx helpers for the Huawei-style
