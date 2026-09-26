@@ -37,8 +37,8 @@ For embodied AI example:
 - Direction one: generalist embodied foundation model.
 - Direction two: world model as co-trainer/simulator/reward or WAM-style action generator.
 
-Use `$huawei-insight-deck` `section_header`, `stage_box`, and `arrow` for the
-three-panel route map.
+Use a native route diagram inside the official body region. Current and
+alternative routes need not form one mandatory sequence.
 
 ### 3. Route Comparison
 
@@ -75,9 +75,9 @@ Four judgement dimensions:
 - 结构化: observation/action/result/takeover records become trainable data.
 - 商业化: delivery and data collection share the same cost base.
 
-For several company examples, use `$huawei-insight-deck` `card` with identical
-row labels so the cases remain comparable. For one featured case, use
-`section_header`, `image_ph`, and `spec_table`.
+For several company examples, use a native comparison table with identical
+fields. For one case, use evidence plus bounded inference. Both arrangements
+inherit the official template through `$huawei-insight-deck`.
 
 ### 5. Trend Judgement
 
@@ -102,8 +102,8 @@ End with implication for the user's domain, for example:
 - Use "代价 / 泛化能力 / 端边侧部署态 / 代表玩家" as judgement anchors.
 - Keep slide body copy free of quotation marks unless quoting verbatim, preserving
   an official term, or discussing the wording itself.
-- Use `洞察` as the standard label for the top conclusion strip; do not use
-  `核心判断`.
+- An extra `洞察` paragraph is optional; avoid repeating the claim title and
+  keep it within the official body region.
 - Avoid listing every paper or company. Pick representative cases that clarify route differences.
 - Keep claims falsifiable: include date, benchmark, product, or source in notes.
 

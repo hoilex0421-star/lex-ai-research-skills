@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "native_tables": 2,
+  "native_charts": 0,
+  "native_text_shapes": 39,
+  "slides": 8,
+  "layouts": [
+    "slideLayout1.xml",
+    "slideLayout5.xml",
+    "slideLayout6.xml",
+    "slideLayout6.xml",
+    "slideLayout6.xml",
+    "slideLayout6.xml",
+    "slideLayout6.xml",
+    "slideLayout7.xml"
+  ],
+  "protected_parts": 34,
+  "source_sha256": "c6f6cc8245ebec463396f1b35fe2700c34dc85edfd2836509cdbdd7e23f00127",
+  "deck_sha256": "758356cc852e42131aaa49f82038523f870e7ab22a80ecaa79fb3c2eed555884",
+  "scope": "Package references, native element inventory, exact official shell, body bounds; not text-fit, visual or fact checking."
+}

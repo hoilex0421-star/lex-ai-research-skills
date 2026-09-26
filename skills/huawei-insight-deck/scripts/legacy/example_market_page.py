@@ -1,3 +1,4 @@
+# LEGACY: custom reading-deck style; not the official Huawei template workflow.
 # -*- coding: utf-8 -*-
 """
 Worked example: a Huawei-style market/insight 论点页 for "三场景市场空间".
