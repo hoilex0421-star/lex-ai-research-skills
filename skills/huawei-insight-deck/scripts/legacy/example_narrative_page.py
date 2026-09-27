@@ -1,3 +1,4 @@
+# LEGACY: custom reading-deck style; not the official Huawei template workflow.
 # -*- coding: utf-8 -*-
 """
 Worked example: the SECOND page family this skill covers — Huawei-style

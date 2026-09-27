@@ -1,0 +1,400 @@
+{
+  "source_url": "https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md",
+  "source_blob_sha": "ff8b734a1cdd88a1b9f5c9d35642b309f0a8a5f6",
+  "slides": [
+    {
+      "id": "H01",
+      "name": "封面",
+      "source_name": "Cover",
+      "kind": "cover",
+      "title": "具身智能技术汇报页型图谱",
+      "metadata": [
+        "主题：具身智能数据与算力服务",
+        "作者：Lex｜42种页型示例",
+        "日期：2026年9月"
+      ],
+      "notes": "H01 Cover：封面。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H02",
+      "name": "目录",
+      "source_name": "Agenda",
+      "kind": "contents",
+      "title": "目录",
+      "items": [
+        "基础叙事与信息组织｜H01–H10",
+        "图文、团队与能力模型｜H11–H20",
+        "策略、区域与数据表达｜H21–H30",
+        "商业方案与项目计划｜H31–H36",
+        "人机协作与组织机制｜H37–H42"
+      ],
+      "notes": "H02 Agenda：目录。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H03",
+      "name": "章节导航",
+      "source_name": "Section Divider",
+      "kind": "contents",
+      "title": "章节导航",
+      "items": [
+        "基础叙事与信息组织｜H01–H10",
+        "图文、团队与能力模型｜H11–H20",
+        "策略、区域与数据表达｜H21–H30",
+        "商业方案与项目计划｜H31–H36",
+        "人机协作与组织机制｜H37–H42"
+      ],
+      "active": 1,
+      "notes": "H03 Section Divider：章节导航。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H04",
+      "name": "观点正文",
+      "source_name": "Title Body",
+      "kind": "body",
+      "title": "算力需求应从任务与负载推导",
+      "content_slide": 1,
+      "notes": "H04 Title Body：观点正文。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H05",
+      "name": "三项能力",
+      "source_name": "Three Cards",
+      "kind": "body",
+      "title": "数据、训练与评测需要三类交付能力",
+      "content_slide": 2,
+      "notes": "H05 Three Cards：三项能力。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H06",
+      "name": "纵向时间线",
+      "source_name": "Vertical Timeline",
+      "kind": "body",
+      "title": "试点按复现、定位和复测逐步推进",
+      "content_slide": 3,
+      "notes": "H06 Vertical Timeline：纵向时间线。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H07",
+      "name": "横向数据条",
+      "source_name": "Data Bars",
+      "kind": "body",
+      "title": "数据等待比单算子耗时更值得先优化",
+      "content_slide": 4,
+      "notes": "H07 Data Bars：横向数据条。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H08",
+      "name": "流程箭头",
+      "source_name": "Process Arrow",
+      "kind": "body",
+      "title": "一条训练链路需要五道质量关口",
+      "content_slide": 5,
+      "notes": "H08 Process Arrow：流程箭头。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H09",
+      "name": "图片证据网格",
+      "source_name": "Image Evidence Grid",
+      "kind": "body",
+      "title": "现场证据应覆盖观察、动作和结果",
+      "content_slide": 6,
+      "notes": "H09 Image Evidence Grid：图片证据网格。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H10",
+      "name": "结束页",
+      "source_name": "Closing",
+      "kind": "end",
+      "title": "Thank you.",
+      "notes": "H10 Closing：结束页。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H11",
+      "name": "研究前言",
+      "source_name": "Framed Foreword",
+      "kind": "body",
+      "title": "研究范围与推导口径",
+      "content_slide": 7,
+      "notes": "H11 Framed Foreword：研究前言。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H12",
+      "name": "图文报告",
+      "source_name": "Media Report Split",
+      "kind": "body",
+      "title": "双臂整理任务暴露数据与部署约束",
+      "content_slide": 8,
+      "notes": "H12 Media Report Split：图文报告。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H13",
+      "name": "五图说明条",
+      "source_name": "Captioned Image Strip",
+      "kind": "body",
+      "title": "五个采集阶段对应五类可核验证据",
+      "content_slide": 9,
+      "notes": "H13 Captioned Image Strip：五图说明条。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H14",
+      "name": "团队角色",
+      "source_name": "Team Profiles",
+      "kind": "body",
+      "title": "跨职能团队应按交付责任分工",
+      "content_slide": 10,
+      "notes": "H14 Team Profiles：团队角色。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H15",
+      "name": "KPI看板",
+      "source_name": "KPI Dashboard",
+      "kind": "body",
+      "title": "交付规模扩大后仍需守住质量门槛",
+      "content_slide": 11,
+      "notes": "H15 KPI Dashboard：KPI看板。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H16",
+      "name": "柱线组合",
+      "source_name": "Combo Chart",
+      "kind": "body",
+      "title": "验收批次与一次通过率共同改善",
+      "content_slide": 12,
+      "notes": "H16 Combo Chart：柱线组合。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H17",
+      "name": "中心辐射",
+      "source_name": "Central Hub",
+      "kind": "body",
+      "title": "实验资产中心连接数据、模型和部署",
+      "content_slide": 13,
+      "notes": "H17 Central Hub：中心辐射。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H18",
+      "name": "斜向路线图",
+      "source_name": "Diagonal Roadmap",
+      "kind": "body",
+      "title": "以阶段退出条件管理能力成熟度",
+      "content_slide": 14,
+      "notes": "H18 Diagonal Roadmap：斜向路线图。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H19",
+      "name": "圆形案例簇",
+      "source_name": "Circular Case Cluster",
+      "kind": "body",
+      "title": "不同场景需要不同的验证重点",
+      "content_slide": 15,
+      "notes": "H19 Circular Case Cluster：圆形案例簇。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H20",
+      "name": "能力图标矩阵",
+      "source_name": "Icon Matrix",
+      "kind": "body",
+      "title": "平台能力要能对应到具体交付物",
+      "content_slide": 16,
+      "notes": "H20 Icon Matrix：能力图标矩阵。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H21",
+      "name": "地图点位",
+      "source_name": "Map Locations",
+      "kind": "body",
+      "title": "园区试点采用分区采集与集中回传",
+      "content_slide": 17,
+      "notes": "H21 Map Locations：地图点位。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H22",
+      "name": "增长阶梯",
+      "source_name": "Growth Staircase",
+      "kind": "body",
+      "title": "复制增长建立在交付标准化之上",
+      "content_slide": 18,
+      "notes": "H22 Growth Staircase：增长阶梯。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H23",
+      "name": "齿轮协同",
+      "source_name": "Gear Process",
+      "kind": "body",
+      "title": "数据、模型与部署通过反馈协同",
+      "content_slide": 19,
+      "notes": "H23 Gear Process：齿轮协同。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H24",
+      "name": "箭头时间线",
+      "source_name": "Arrow Callout Timeline",
+      "kind": "body",
+      "title": "关键节点同时记录产出与退出条件",
+      "content_slide": 20,
+      "notes": "H24 Arrow Callout Timeline：箭头时间线。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H25",
+      "name": "现场引语",
+      "source_name": "Photo Quote",
+      "kind": "body",
+      "title": "从现场失败样本寻找优化入口",
+      "content_slide": 21,
+      "notes": "H25 Photo Quote：现场引语。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H26",
+      "name": "战略隐喻对比",
+      "source_name": "Metaphor Compare",
+      "kind": "body",
+      "title": "交付价值取决于数据基础与系统能力",
+      "content_slide": 22,
+      "notes": "H26 Metaphor Compare：战略隐喻对比。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H27",
+      "name": "问题拆解",
+      "source_name": "Problem Overview",
+      "kind": "body",
+      "title": "试点先解决数据、复现和现场三类问题",
+      "content_slide": 23,
+      "notes": "H27 Problem Overview：问题拆解。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H28",
+      "name": "市场空间圆环",
+      "source_name": "Market Size Donut",
+      "kind": "body",
+      "title": "市场空间按可服务客户逐层收敛",
+      "content_slide": 24,
+      "notes": "H28 Market Size Donut：市场空间圆环。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H29",
+      "name": "预算分配圆环",
+      "source_name": "Funding Use Donut",
+      "kind": "body",
+      "title": "预算围绕数据资产与工程验证分配",
+      "content_slide": 25,
+      "notes": "H29 Funding Use Donut：预算分配圆环。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H30",
+      "name": "三组份额图",
+      "source_name": "Mini Market Share Charts",
+      "kind": "body",
+      "title": "三个场景的方案占比应分别比较",
+      "content_slide": 26,
+      "notes": "H30 Mini Market Share Charts：三组份额图。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H31",
+      "name": "商业模式",
+      "source_name": "Business Model Cards",
+      "kind": "body",
+      "title": "服务收入从项目交付逐步走向复用",
+      "content_slide": 27,
+      "notes": "H31 Business Model Cards：商业模式。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H32",
+      "name": "KPI循环",
+      "source_name": "KPI Square Loop",
+      "kind": "body",
+      "title": "四个指标构成数据交付改进循环",
+      "content_slide": 28,
+      "notes": "H32 KPI Square Loop：KPI循环。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H33",
+      "name": "服务定价",
+      "source_name": "Pricing Table",
+      "kind": "body",
+      "title": "服务档位按交付范围和责任定价",
+      "content_slide": 29,
+      "notes": "H33 Pricing Table：服务定价。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H34",
+      "name": "SWOT分析",
+      "source_name": "SWOT Dark Panel",
+      "kind": "body",
+      "title": "技术服务试点的优势与风险并存",
+      "content_slide": 30,
+      "notes": "H34 SWOT Dark Panel：SWOT分析。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H35",
+      "name": "甘特计划",
+      "source_name": "Gantt Milestones",
+      "kind": "body",
+      "title": "十二周计划以验收节点约束并行任务",
+      "content_slide": 31,
+      "notes": "H35 Gantt Milestones：甘特计划。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H36",
+      "name": "客户反馈",
+      "source_name": "Client Testimonials",
+      "kind": "body",
+      "title": "客户反馈应转化为可验证的需求",
+      "content_slide": 32,
+      "notes": "H36 Client Testimonials：客户反馈。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H37",
+      "name": "人机协作闭环",
+      "source_name": "Human Agent Loop",
+      "kind": "body",
+      "title": "自动执行与人工门禁共同构成闭环",
+      "content_slide": 33,
+      "notes": "H37 Human Agent Loop：人机协作闭环。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H38",
+      "name": "治理与裁决",
+      "source_name": "On In Governance Split",
+      "kind": "body",
+      "title": "治理负责边界，裁决处理具体例外",
+      "content_slide": 34,
+      "notes": "H38 On In Governance Split：治理与裁决。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H39",
+      "name": "组织协议",
+      "source_name": "Org Protocol Board",
+      "kind": "body",
+      "title": "组织协议必须明确角色、流程与触发器",
+      "content_slide": 35,
+      "notes": "H39 Org Protocol Board：组织协议。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H40",
+      "name": "任务能力匹配",
+      "source_name": "Matching Engine",
+      "kind": "body",
+      "title": "任务标签与能力标签决定动态编组",
+      "content_slide": 36,
+      "notes": "H40 Matching Engine：任务能力匹配。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H41",
+      "name": "类比映射",
+      "source_name": "Metaphor Mapping",
+      "kind": "body",
+      "title": "用质量管理机制理解训练交付体系",
+      "content_slide": 37,
+      "notes": "H41 Metaphor Mapping：类比映射。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    },
+    {
+      "id": "H42",
+      "name": "前后对照案例",
+      "source_name": "Before After Case",
+      "kind": "body",
+      "title": "标准化流程缩短等待并保留质量门禁",
+      "content_slide": 38,
+      "notes": "H42 Before After Case：前后对照案例。页型组织参考 https://github.com/SeanDongX/guizang-ppt-skill/blob/main/references/layouts-huawei.md 。封面、目录/章节、正文及结束页以指定官方模板为准；H03复用官方目录，H34仅正文内容采用深色，官方页面保持白底。所有具体项目、人物、访谈与数值均为原创示例或演算假设，不代表真实客户、已达成合作或平台实测。照片素材为AI生成的场景示意。"
+    }
+  ]
+}

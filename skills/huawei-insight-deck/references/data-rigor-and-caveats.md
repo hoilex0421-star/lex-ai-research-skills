@@ -71,18 +71,14 @@ Tag each external figure as one of: **官方/机构发布** (firm's published nu
 **厂商自报** (a company's own claim about itself), or **研判/估算** (your derivation).
 Keep them visually distinct and never let a 研判 number masquerade as 官方.
 
-## 7. Web-image embedding is constrained (tooling reality)
+## 7. Image provenance and available tools
 
-Images on the web (paper figures, blog charts, GitHub raw) cannot be pulled into
-the workspace automatically: base64 transfer is blocked, direct download is
-disallowed, and a browser download lands in the user's local Downloads, not the
-connected folder. So:
-
-- To embed a figure, the **user must save it into the connected project folder**;
-  then you can read, crop and place it. Or use local assets already in the project.
-- Otherwise, give the **direct link** and open it in the user's browser to save.
-- When suggesting figures, name *which paper / which figure / the direct link / why
-  it evidences the claim*, and mark the source caliber.
+Use source figures only through the active environment's permitted tools and
+asset-handling rules. Do not assume every environment forbids downloads or requires
+manual uploads. Prefer provided/local assets or permitted source acquisition;
+never work around display/access restrictions. If acquisition is blocked, keep a
+precise source link or request the missing asset rather than inventing a figure.
+Record paper/report title, figure/page number, URL and the claim it supports.
 
 ## 8. Traceability — speaker notes carry the full sourcing
 

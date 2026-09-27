@@ -3,7 +3,7 @@
 [English](README.md) | [简体中文](README.zh-CN.md)
 
 面向产业研究（偏技术方向）和高层汇报的可复用 Codex 技能库。
-持续刷新
+默认采用指定的华为官方 2021 浅色模板；研究方法与视觉生产分层维护。
 
 ## 可用技能
 
@@ -62,7 +62,8 @@ $huawei-insight-deck
 
 - 支持本地技能发现的 Codex。
 - 用于克隆和更新技能库的 Git。
-- 运行 `huawei-insight-deck` 随附的可选 PowerPoint 辅助脚本与示例时，需要 Python 3 和 `python-pptx`。
+- 官方模板下载、拼装与校验使用 Python 3 标准库。可选样张内容生成器使用 Node.js 与 Codex 自带的 `@oai/artifact-tool`；原模板字体需在本机可用。
+- 不具备上述内容生成工具时，可用其他 PPTX 编辑器生成原生正文后拼装。仅历史脚本需要 `python-pptx`。
 - LibreOffice 与 Poppler 为可选工具，可用于本地幻灯片渲染和视觉 QA；也可以使用 Codex 运行环境提供的同类演示工具。
 
 ### 公共准备
@@ -120,14 +121,50 @@ $tech-research-deck
 
 ```text
 $huawei-insight-deck
-把已经确认的具身智能数据基础设施研究提纲制作成一份可编辑的 16:9 高管阅读型报告。每页只表达一个明确论点，采用克制的红色视觉体系、PowerPoint 原生元素、简洁来源注释和一致的比较版式。完成后渲染全部页面，逐页检查裁切、重叠、层级、图片位置和来源可读性，并交付可编辑 PPTX。
+把已经确认的具身智能数据基础设施研究提纲制作成一份可编辑的 16:9 高管阅读型报告。每页只表达一个明确论点，封面、目录/章节导航、正文和结束页严格复用指定的华为官方 2021 浅色模板。采用 PowerPoint 原生元素、简洁来源注释和一致的比较版式。完成后渲染全部页面，逐页检查裁切、重叠、层级、图片位置和来源可读性，并交付可编辑 PPTX。
 ```
 
-## 案例展示
+## 官方模板与可视化样张
+
+默认视觉来源是 [华为官方《PPT模板-浅色版16-9》2021 年版](https://e.huawei.com/cn/documents/others/4f951fb72e1944288d3aa73bf40d8a8b)。封面、目录、正文、结束页直接复用源文件；官方文件没有独立章节页，因此以目录版式作章节导航，红色当前项是本库的导航约定。
+
+[下载 8 页可编辑样张](assets/official-style/official-template-example.pptx) · [查看 PDF](assets/official-style/official-template-example.pdf) · [生成与复用方法](skills/huawei-insight-deck/references/production.md) · [验证记录](assets/official-style/validation.md)
+
+### 42 种页型：每种一页代表性示例
+
+按 SeanDongX 的 **H01–H42** 完整制作，内容覆盖图文证据、时间线、柱线组合、圆环、团队、地图、商业模式、甘特图和人机协作。继续使用同一官方模板，增加内容结构的多样性。
+
+[浏览全部 42 页](assets/layout-atlas/README.md) · [下载可编辑 PPTX](assets/layout-atlas/huawei-layout-atlas-42.pptx) · [查看 PDF](assets/layout-atlas/huawei-layout-atlas-42.pdf) · [页型目录与用法](skills/huawei-insight-deck/references/layout-atlas.md)
+
+| H13 五图说明条 | H16 柱线组合 |
+| --- | --- |
+| ![H13](assets/layout-atlas/H13.png) | ![H16](assets/layout-atlas/H16.png) |
+| H21 地图点位 | H39 组织协议 |
+| ![H21](assets/layout-atlas/H21.png) | ![H39](assets/layout-atlas/H39.png) |
+
+42 页按页型编号排列，H10 结束页保留在第 10 页。含 8 个原生图表及数据工作簿、6 张原生表格，文字和机制图可编辑。数据、报价、人物、访谈与案例为演示示例，照片为 AI 场景示意，不能替代业务证据。
+
+### 基础 8 页样张
+
+| 官方封面 | 官方目录作章节导航 |
+| --- | --- |
+| ![官方封面](assets/official-style/01-cover.png) | ![章节导航](assets/official-style/02-navigation.png) |
+| 技术架构 | 训练验证流程 |
+| ![架构页](assets/official-style/03-architecture.png) | ![流程页](assets/official-style/04-flow.png) |
+| 同口径比较 | 证据与判断边界 |
+| ![比较表](assets/official-style/05-comparison.png) | ![证据页](assets/official-style/06-evidence.png) |
+| 联合验证计划 | 官方结束页 |
+| ![验证计划](assets/official-style/07-validation.png) | ![结束页](assets/official-style/08-ending.png) |
+
+样张内容是分析方法和待验证方案示例，不代表实测结果或已达成的合作。新正文文本、图形和两张表格均为原生可编辑对象；官方背景图保留为图片。
+
+[SeanDongX/guizang-ppt-skill](https://github.com/SeanDongX/guizang-ppt-skill) 提供内容组织方式的参考，本库不复制其实现或用其视觉样式覆盖官方模板。原模板图像、标识及原有文字归华为所有，本项目及样张不代表华为官方发布或背书。
+
+## 历史案例展示
 
 ### 具身数据产业研究：从数据工厂到物理 AI 基础设施
 
-这是由本仓库研究与演示工作流产出的真实案例，展示如何把宽泛的产业问题转化为有证据支撑的研究叙事、结构化产业模型、运营流程和趋势判断。案例不提供源 PPTX 下载。
+以下案例采用此前的自定义阅读型风格，保留用于展示研究叙事，不作为当前官方模板规范。它是由本仓库研究与演示工作流产出的真实案例，展示如何把宽泛的产业问题转化为有证据支撑的研究叙事、结构化产业模型、运营流程和趋势判断。案例不提供源 PPTX 下载。
 
 <table>
   <tr>
@@ -155,6 +192,7 @@ lex-ai-research-skills/
 ├── README.md
 ├── README.zh-CN.md
 ├── assets/
+│   ├── official-style/  # 当前样张、预览与验证记录
 │   └── cases/
 │       └── embodied-data-industry/
 │           ├── cover.png
@@ -165,6 +203,7 @@ lex-ai-research-skills/
     ├── huawei-insight-deck/
     │   ├── SKILL.md
     │   ├── agents/
+    │   ├── assets/  # 官方来源清单与示例内容
     │   ├── references/
     │   └── scripts/
     └── tech-research-deck/
@@ -181,7 +220,7 @@ lex-ai-research-skills/
 - **证据可追溯：** 关键事实和数字保留来源、日期、范围与测量口径，来源注释始终对应其支撑的论点。
 - **同字段比较：** 需要直接比较的路线、产品、公司和案例采用相同字段与评价维度。
 - **正文直接表达：** 正文非必要不加引号；仅在逐字引用、官方术语或分析特定措辞时使用引号。
-- **统一结论标签：** 页面顶部结论条使用 `洞察`，不用 `核心判断`。
+- **官方视觉规范：** 复用官方母版、字体、位置与页脚；正文标题承载观点，不强制叠加洞察条或结论栏。
 - **PowerPoint 可编辑：** 文本、形状、表格和图表保持可编辑，便于交付后的审阅与修订。
 - **渲染 QA：** 每份完成的报告都要经过渲染和逐页视觉检查，覆盖重叠、裁切、对齐、层级、图片位置与来源注释可读性。
 

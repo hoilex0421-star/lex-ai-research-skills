@@ -1,7 +1,9 @@
+> Historical custom design only. Not the official Huawei template; do not use in the default workflow.
+
 # Layout & visual spec
 
 Exact geometry for the Huawei-style market/insight 论点页. Units are inches on a
-**13.333 × 7.5** (16:9) slide. The helpers in `scripts/deck_helpers.py` already
+**13.333 × 7.5** (16:9) slide. The helpers in `scripts/legacy/deck_helpers.py` already
 encode these; this file is the reference when you need to deviate or debug.
 
 ## Table of contents

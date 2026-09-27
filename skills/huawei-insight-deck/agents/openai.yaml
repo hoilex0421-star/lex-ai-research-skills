@@ -1,4 +1,4 @@
 interface:
-  display_name: "Huawei Reading Deck"
-  short_description: "华为风格阅读型PPT版式组件渲染检查底座"
-  default_prompt: "Use $huawei-insight-deck to turn this outline into a restrained-red Chinese reading deck."
+  display_name: "Huawei Official-Template Deck"
+  short_description: "复用指定华为官方模板制作可编辑技术汇报并逐页渲染检查"
+  default_prompt: "Use $huawei-insight-deck to turn this outline into an editable Chinese technical deck using the pinned official Huawei 2021 light template. Preserve cover, contents, body and ending layouts and render every page."

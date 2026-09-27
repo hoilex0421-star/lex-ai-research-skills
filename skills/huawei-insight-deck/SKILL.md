@@ -1,117 +1,77 @@
 ---
 name: huawei-insight-deck
 description: >-
-  Build Huawei-style restrained-red 16:9 reading slides and one-pagers for
-  executive research materials. Use when Codex needs the visual system,
-  layout components, and render-QA mechanics for dense Chinese reading PPTs:
-  red claim title, light-red insight/judgement bands, dashed route panels,
-  comparison cards, case cards with images, tables, footers, and source notes.
-  Trigger on requests such as 华为风格PPT、阅读型PPT、研究一页纸、技术路线图、
-  案例卡、对比表、结论栏、版面优化、渲染检查. This is a visual/layout foundation
-  skill; pair it with tech-research-deck or investment-recommendation-deck when
-  the task requires deciding the research or investment narrative.
+  Produce editable Chinese technical and executive PPTs using the pinned Huawei
+  official 2021 light 16:9 template. Use for 华为风格PPT、技术汇报、研究一页纸、
+  版式优化 and render QA when the argument is established. Preserves official
+  cover, contents/chapter navigation, body and ending layouts, while adding
+  native architecture diagrams, flows, comparisons and evidence. Pair with
+  tech-research-deck when the research narrative still needs development.
 ---
 
-# Huawei-Style Reading Deck Foundation
+# Huawei Official-Template Research Deck
 
-Use this skill as the **visual and production layer** for Huawei-style reading
-PPTs. It defines the restrained-red house style, reusable page components,
-PowerPoint helper functions, and render-QA workflow.
+Use this skill for visual production. Keep research claims and evidence decisions
+in the user brief or `$tech-research-deck`; a template establishes neither technical
+validity nor company endorsement.
 
-It should not decide the business or technical argument by itself. For narrative
-logic, use a task skill first:
+## Source of truth
 
-- `$tech-research-deck` for technical architecture, route, and trend research.
-- `$investment-recommendation-deck` for company investment recommendation logic.
+The default is the user-selected [Huawei official light 16:9 template, 2021](https://e.huawei.com/cn/documents/others/4f951fb72e1944288d3aa73bf40d8a8b).
+Its exact file and hash are pinned in `assets/official-template.json`.
 
-Then use this skill to build or polish the slides.
+- Reuse its actual masters, layouts, theme, artwork, dimensions and placeholders.
+  Preserve their bytes with the bundled assembler. Do not redraw a similar shell.
+- Source pages: cover, contents, body, chart-color example and ending.
+  **No separate chapter master exists.** Reuse contents as chapter navigation;
+  an optional red current item is our navigation convention.
+- Source slide 4 is a color reference, not a page to ship with sample numbers.
+- Body title: 32pt Microsoft YaHei; primary body: 18pt; secondary: 12.99pt.
+  Retain positions, white background, page number, confidentiality label and logo.
+  No added title underline, fixed insight band or compulsory bottom strip.
+- New content belongs inside the original body area. Shorten or split crowded
+  content; never silently shrink the official font scale to solve overflow.
+- Source-derived rules override community styles. SeanDongX is a conceptual
+  layout reference only, not an official Huawei specification.
+- Follow explicit user requests for different branding/template treatment, and
+  disclose such deviations rather than claiming an exact template match.
 
-## When This Skill Should Lead
+Read [official-template-spec.md](references/official-template-spec.md) before authoring.
+Select content arrangements from [template-archetypes.md](references/template-archetypes.md).
+For visual selection, use the [H01–H42 atlas](references/layout-atlas.md): one
+representative slide per community page type, with editable PPTX and previews.
+Qualify facts using [data-rigor-and-caveats.md](references/data-rigor-and-caveats.md).
 
-Use this skill directly when the user already has the argument and needs:
+## Build and inspect
 
-- a Huawei-style reading slide or one-pager;
-- a dense but clean technical or business layout;
-- route diagrams, comparison tables, case cards, or chart-like evidence blocks;
-- PPT polishing, alignment, image placement, or render QA;
-- conversion of a Markdown outline into a visually consistent slide.
+1. Establish one supported claim per body slide; choose the structure by its argument.
+2. Fetch/verify the original with `scripts/fetch_official_template.py`. A failed
+   download or hash mismatch is a dependency failure: obtain the original file
+   instead of inventing a replacement template.
+3. Use the official PPTX directly in a capable editor, or follow the reproducible
+   [production recipe](references/production.md): author native content on the exact
+   canvas, then `scripts/assemble_official.py` fills original placeholders and
+   places it in the official shell. `scripts/build_content.mjs` demonstrates five
+   layouts using Artifact Tool; the assembler accepts other native PPTX producers.
+4. Put claim-level source, date, scope and derivation in notes; keep important
+   qualifiers visible. Distinguish facts, vendor claims, inference, estimates and
+   proposed validation with words, not just colors.
+5. Verify relationships, shell preservation, body bounds and native tables/charts
+   where used. Render all pages with the reference fonts. Compare cover, navigation,
+   body and ending against the source; inspect content for clipping, overlaps,
+   broken arrows and unreadable notes. XML checks alone are not visual QA.
+6. Deliver editable PPTX, previews and a short validation summary. State untested
+   applications and any font substitution.
 
-When the user is still asking **what to say**, do not lead with this skill:
+The [example spec](assets/example-deck.json) contains illustrative analysis and
+proposed validation, with no fabricated benchmark or partner commitments.
+The repository README links the rendered gallery and editable sample.
+The 42-page atlas adds photo grids, native data charts, market/budget arithmetic,
+team profiles, governance and organization mechanisms. Its numbers and scenarios
+are illustrative; replace them with supported project content before delivery.
 
-- use `$tech-research-deck` for technology structure and trend judgement;
-- use `$investment-recommendation-deck` for company recommendation logic.
+## Legacy boundary
 
-## Core Visual System
-
-- 16:9 white canvas, dense but ordered, with equal safe margins.
-- 微软雅黑 everywhere.
-- `C7000B` red is the primary accent for claim titles, key labels, judgement
-  strips, and conclusions.
-- Use muted gray cards, light-red bands, and dashed rounded panels.
-- **Hard color budget:** each slide may use at most **three theme colors**.
-  White, black, grayscale neutrals, and light tints derived from an active
-  theme color do not count. Default to one dominant color plus one supporting
-  color; use the third only for a stable semantic role.
-- Follow consulting-deck color discipline: high-contrast white space,
-  McKinsey-like deep-blue restraint, or BCG-like green restraint. Pick one
-  palette logic for the slide/deck; do not casually mix palette families or
-  assign a different hue to every card, stage, person, or category.
-- One slide should carry one argument. If mechanism, evidence, and case detail
-  compete for space, split the page.
-
-## Page Components
-
-Use `scripts/deck_helpers.py` for deterministic layout:
-
-- Global chrome: `newdeck`, `blank`, `title_band`, `footer`, `note`.
-- Reading-page bands: `insight_band`, `section_header`, `conclusion_band`.
-- Comparison and evidence: `card`, `spec_table`, `image_case_card`, `image_ph`.
-- Technical diagrams: `dashed_panel`, `route_node`, `stage_box`, `arrow`,
-  `time_axis`, `event_card`, `tag_chip`, `legend`.
-- Charts: `stacked_bar`, `seg`, `dot`, `hline`.
-
-Detailed geometry and component rules live in:
-
-- `references/layout-and-visual-spec.md` for exact coordinates and QA pitfalls.
-- `references/template-archetypes.md` for reusable visual page silhouettes.
-- `references/data-rigor-and-caveats.md` for source and evidence discipline.
-
-Read only the reference file needed for the current slide type.
-
-## Recommended Build Flow
-
-1. Use the domain skill or user brief to decide the slide argument.
-2. Pick a visual archetype from `references/template-archetypes.md`.
-3. Build with `scripts/deck_helpers.py`; reuse helpers instead of manually
-   redrawing common components.
-4. Put detailed sources in speaker notes; keep on-page source/caliber notes short.
-5. Run `assert_theme_color_budget(slide)` on every slide.
-6. Render to PNG and inspect before delivery.
-
-## Render-QA Requirements
-
-Always render and inspect before final delivery:
-
-```bash
-python3 your_build.py
-libreoffice --headless --convert-to pdf --outdir outputs your_deck.pptx
-pdftoppm -png -r 200 outputs/your_deck.pdf outputs/preview
-```
-
-Check:
-
-- `assert_theme_color_budget(slide)` passes with no more than three theme colors;
-  pictures are excluded from this count.
-- No text overlap or clipped labels.
-- Title and judgement bands stay readable and do not wrap unintentionally.
-- Arrows sit in gaps between boxes.
-- Tables do not shrink body text below readable size.
-- Images sit inside their owning card or frame; no floating screenshots.
-- Footer/source notes stay within the footer area.
-
-## Boundary
-
-This skill is responsible for **how the page looks and validates**, not for
-deciding whether a technology is promising or whether a company is investable.
-When those decisions are required, invoke the relevant upper-layer skill first
-and then use this skill for slide construction.
+`scripts/legacy/` and `references/legacy/` preserve the old custom red system for
+explicit historical reproduction only. Do not load them for the official-template
+workflow. They are not Huawei's official specification.

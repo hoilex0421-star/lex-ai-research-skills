@@ -3,3 +3,6 @@
 .worktrees/
 __pycache__/
 *.pyc
+.build/
+.template-cache/
+node_modules/
