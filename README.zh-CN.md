@@ -7,14 +7,16 @@
 
 ## 可用技能
 
-| 技能 | 作用 | 适用场景 | 主要输出 |
-| --- | --- | --- | --- |
-| `tech-research-deck` | 定义并组织技术研究 | 架构、路线、案例、趋势 | 有来源支撑的研究叙事 |
-| `huawei-insight-deck` | 将判断转化为一致页面 | 汇报材料、单页、成稿制作 | 经渲染检查的可编辑 PPT |
-| `startup-meeting-minutes` | 将交流转写整理成结论前置的纪要 | 初创公司、高校专家技术交流 | 会议纪要 + Outlook 邮件草稿 |
+| 阶段 | 技能 | 作用 | 适用场景 | 主要输出 |
+| --- | --- | --- | --- | --- |
+| 1. 交流记录 | `startup-meeting-minutes` | 将交流转写和速记整理成结论前置的纪要 | 初创公司、高校专家技术交流 | 会议纪要 + Outlook 邮件草稿 |
+| 2. 研究成形 | `tech-research-deck` | 定义并组织技术研究 | 架构、路线、案例、趋势 | 有来源支撑的研究叙事 |
+| 3. 汇报交付 | `huawei-insight-deck` | 将判断转化为一致页面 | 汇报材料、单页、成稿制作 | 经渲染检查的可编辑 PPT |
 
+三项技能对应同一条研究工作流。
+`startup-meeting-minutes` 负责把与初创公司、高校专家的交流整理成客观、结论前置的纪要，沉淀一手证据。
 `tech-research-deck` 负责研究问题、证据、技术架构、路线、案例和趋势，适合从问题尚未定型、材料仍需核验的阶段开始工作。
-`huawei-insight-deck` 负责把已经形成的判断转成结构一致、可编辑、适合领导(尤其是华子领导）阅读的PPT页面。两项技能可以单独使用，也可以串联完成从研究形成到演示交付的完整任务。
+`huawei-insight-deck` 负责把已经形成的判断转成结构一致、可编辑、适合领导(尤其是华子领导）阅读的PPT页面。三项技能可以单独使用，也可以串联完成从一次交流到成稿汇报的完整任务。
 
 ## 为什么建立这个仓库
 
@@ -26,12 +28,14 @@
 ## 工作方式
 
 ```text
-源材料
-  -> 研究定界
+交流、转写与速记
+  -> 结论前置的会议纪要      (startup-meeting-minutes)
+源材料 + 纪要
+  -> 研究定界                (tech-research-deck)
   -> 证据与来源核验
   -> 架构与路线拆解
   -> 页面级论点
-  -> 幻灯片构建
+  -> 幻灯片构建              (huawei-insight-deck)
   -> 渲染与视觉 QA
   -> 可编辑 PPT
 ```
@@ -42,6 +46,12 @@
 - **可编辑交付：** 在可行范围内使用 PowerPoint 原生文本、形状、表格和图表，保证交付后仍可审阅和修改。
 
 ## 快速开始
+
+与初创公司或专家交流后，需要把转写和速记整理成给领导看的纪要（可同时生成 Outlook 邮件）时，调用纪要技能：
+
+```text
+$startup-meeting-minutes
+```
 
 当研究问题仍需定义，或证据与技术结构尚未建立时，调用研究技能：
 
@@ -55,7 +65,7 @@ $tech-research-deck
 $huawei-insight-deck
 ```
 
-端到端任务可以先用 `$tech-research-deck` 建立研究结构、证据链和页面论点，再用 `$huawei-insight-deck` 完成页面构建、渲染检查与可编辑演示文稿交付。
+端到端任务可以先用 `$startup-meeting-minutes` 沉淀交流纪要，再用 `$tech-research-deck` 建立研究结构、证据链和页面论点，再用 `$huawei-insight-deck` 完成页面构建、渲染检查与可编辑演示文稿交付。
 
 ## 安装
 
@@ -75,10 +85,10 @@ cd lex-ai-research-skills
 mkdir -p ~/.codex/skills
 ```
 
-如果 `~/.codex/skills/huawei-insight-deck` 或 `~/.codex/skills/tech-research-deck` 已经存在，请先备份或移除旧版本。选择安装方式前，运行下面的非破坏性检查；它也能识别失效的软链接，并会在发现冲突时直接退出，不会改动现有文件：
+如果 `~/.codex/skills/startup-meeting-minutes`、`~/.codex/skills/tech-research-deck` 或 `~/.codex/skills/huawei-insight-deck` 已经存在，请先备份或移除旧版本。选择安装方式前，运行下面的非破坏性检查；它也能识别失效的软链接，并会在发现冲突时直接退出，不会改动现有文件：
 
 ```bash
-for skill in huawei-insight-deck tech-research-deck; do
+for skill in startup-meeting-minutes tech-research-deck huawei-insight-deck; do
   target="$HOME/.codex/skills/$skill"
   if [ -e "$target" ] || [ -L "$target" ]; then
     printf 'Installation conflict: %s already exists. Back it up or remove it first.\n' "$target" >&2
@@ -94,6 +104,7 @@ done
 软链接会让已安装技能持续指向克隆的仓库，因此仓库更新后，Codex 可以直接使用最新内容。
 
 ```bash
+ln -s "$PWD/skills/startup-meeting-minutes" ~/.codex/skills/startup-meeting-minutes
 ln -s "$PWD/skills/huawei-insight-deck" ~/.codex/skills/huawei-insight-deck
 ln -s "$PWD/skills/tech-research-deck" ~/.codex/skills/tech-research-deck
 ```
@@ -103,6 +114,7 @@ ln -s "$PWD/skills/tech-research-deck" ~/.codex/skills/tech-research-deck
 如果希望已安装技能与克隆仓库相互独立，可以直接复制目录。
 
 ```bash
+cp -R skills/startup-meeting-minutes ~/.codex/skills/startup-meeting-minutes
 cp -R skills/huawei-insight-deck ~/.codex/skills/huawei-insight-deck
 cp -R skills/tech-research-deck ~/.codex/skills/tech-research-deck
 ```
@@ -110,6 +122,15 @@ cp -R skills/tech-research-deck ~/.codex/skills/tech-research-deck
 安装完成后，请重启 Codex 或新开一个任务，让 Codex 重新发现这些技能。
 
 ## 使用示例
+
+### 会议纪要
+
+```text
+$startup-meeting-minutes
+把附件里的交流转写和我的速记整理成会议纪要。核心结论 3–5 条放在最前面，正文只记对方的事实，模型规模、训练和推理数字集中成一张表，并列出还需要我确认的人名和数字。最后生成 Outlook 邮件版。
+```
+
+完整结构见[脱敏样例](skills/startup-meeting-minutes/assets/example-minutes.json)。
 
 ### 技术研究
 

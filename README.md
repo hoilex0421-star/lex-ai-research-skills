@@ -4,17 +4,19 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-A library of reusable Codex skills for industrial research, technology analysis, evidence organization, and executive communication. It packages a personal research method into installable workflows that can be used independently or combined from question framing through editable presentation delivery.
+A library of reusable Codex skills for industrial research, technology analysis, evidence organization, and executive communication. It packages a personal research method into installable workflows that can be used independently or combined, from recording first-hand exchanges through research framing to editable presentation delivery.
 
 ## Available Skills
 
 | Skill | Purpose | Best for | Main output |
 | --- | --- | --- | --- |
-| `tech-research-deck` | Frames and structures technology research. | Architectures, routes, cases, and trends. | A source-aware, slide-ready research narrative. |
-| `huawei-insight-deck` | Turns established judgments into consistent pages. | Executive decks, one-pagers, and page production. | An editable 16:9 PowerPoint deck with render QA. |
-| `startup-meeting-minutes` | Turns startup/expert meeting transcripts into conclusion-first minutes. | Technical exchanges with startups and university experts. | Chinese meeting minutes plus an Outlook-ready email draft. |
+| Stage | Skill | Purpose | Best for | Main output |
+| --- | --- | --- | --- | --- |
+| 1. Record | `startup-meeting-minutes` | Turns exchange transcripts and notes into conclusion-first minutes. | Technical exchanges with startups and university experts. | Chinese meeting minutes plus an Outlook-ready email draft. |
+| 2. Research | `tech-research-deck` | Frames and structures technology research. | Architectures, routes, cases, and trends. | A source-aware, slide-ready research narrative. |
+| 3. Deliver | `huawei-insight-deck` | Turns established judgments into consistent pages. | Executive decks, one-pagers, and page production. | An editable 16:9 PowerPoint deck with render QA. |
 
-`tech-research-deck` is responsible for the research question, evidence, architecture, routes, cases, and trends. `huawei-insight-deck` is responsible for turning an established argument into consistent, editable pages designed for executive reading. Each skill can be used on its own, or they can be chained when a task needs both research development and presentation production.
+The three skills follow one research workflow. `startup-meeting-minutes` captures first-hand evidence from startup and expert exchanges as factual, conclusion-first minutes. `tech-research-deck` is responsible for the research question, evidence, architecture, routes, cases, and trends. `huawei-insight-deck` is responsible for turning an established argument into consistent, editable pages designed for executive reading. Each skill can be used on its own, or they can be chained from a single exchange to a finished deck.
 
 ## Why This Repository Exists
 
@@ -25,12 +27,14 @@ This repository makes that method explicit. The skills preserve the decisions th
 ## How It Works
 
 ```text
-source material
-  -> research framing
+exchanges, transcripts and notes
+  -> conclusion-first minutes          (startup-meeting-minutes)
+source material + minutes
+  -> research framing                  (tech-research-deck)
   -> evidence and source verification
   -> architecture and route decomposition
   -> page-level claims
-  -> slide construction
+  -> slide construction                (huawei-insight-deck)
   -> render and visual QA
   -> editable PPT output
 ```
@@ -41,6 +45,12 @@ source material
 - **Editable delivery:** final pages use native PowerPoint text, shapes, tables, and charts wherever practical. The deck remains usable after delivery instead of becoming a set of flattened images.
 
 ## Quick Start
+
+Use the minutes skill after a startup or expert exchange, when a transcript and notes need to become minutes for leadership (optionally as an Outlook email):
+
+```text
+$startup-meeting-minutes
+```
 
 Use the research skill when the question is still being defined or the evidence and technical structure need to be developed:
 
@@ -54,7 +64,7 @@ Use the presentation skill when the argument already exists and needs to become 
 $huawei-insight-deck
 ```
 
-For an end-to-end assignment, start with `$tech-research-deck` to establish the research structure and page claims, then use `$huawei-insight-deck` to construct, render, inspect, and deliver the editable presentation.
+For an end-to-end assignment, record exchanges with `$startup-meeting-minutes`, start with `$tech-research-deck` to establish the research structure and page claims, then use `$huawei-insight-deck` to construct, render, inspect, and deliver the editable presentation.
 
 ## Installation
 
@@ -74,10 +84,10 @@ cd lex-ai-research-skills
 mkdir -p ~/.codex/skills
 ```
 
-If `~/.codex/skills/huawei-insight-deck` or `~/.codex/skills/tech-research-deck` already exists, back up or remove the old installation before continuing. Run this non-destructive preflight check before choosing either option; it also detects broken symlinks and exits without changing them:
+If `~/.codex/skills/startup-meeting-minutes`, `~/.codex/skills/tech-research-deck` or `~/.codex/skills/huawei-insight-deck` already exists, back up or remove the old installation before continuing. Run this non-destructive preflight check before choosing either option; it also detects broken symlinks and exits without changing them:
 
 ```bash
-for skill in huawei-insight-deck tech-research-deck; do
+for skill in startup-meeting-minutes tech-research-deck huawei-insight-deck; do
   target="$HOME/.codex/skills/$skill"
   if [ -e "$target" ] || [ -L "$target" ]; then
     printf 'Installation conflict: %s already exists. Back it up or remove it first.\n' "$target" >&2
@@ -93,6 +103,7 @@ After completing the common setup, choose one of the following installation opti
 Symlinks keep the installed skills connected to the cloned repository, so repository updates are immediately available in Codex.
 
 ```bash
+ln -s "$PWD/skills/startup-meeting-minutes" ~/.codex/skills/startup-meeting-minutes
 ln -s "$PWD/skills/huawei-insight-deck" ~/.codex/skills/huawei-insight-deck
 ln -s "$PWD/skills/tech-research-deck" ~/.codex/skills/tech-research-deck
 ```
@@ -102,6 +113,7 @@ ln -s "$PWD/skills/tech-research-deck" ~/.codex/skills/tech-research-deck
 Use direct copies when the installed skills should remain independent of the cloned repository.
 
 ```bash
+cp -R skills/startup-meeting-minutes ~/.codex/skills/startup-meeting-minutes
 cp -R skills/huawei-insight-deck ~/.codex/skills/huawei-insight-deck
 cp -R skills/tech-research-deck ~/.codex/skills/tech-research-deck
 ```
@@ -109,6 +121,15 @@ cp -R skills/tech-research-deck ~/.codex/skills/tech-research-deck
 Restart Codex or open a new task after installation so the skills are discovered.
 
 ## Usage Examples
+
+### Meeting minutes
+
+```text
+$startup-meeting-minutes
+Turn the attached exchange transcript and my quick notes into meeting minutes. Put 3–5 core conclusions first, record only the counterpart's facts in the body, collect model scale, training and inference figures in one table, and list any names or numbers that still need my confirmation. Then build the Outlook email version.
+```
+
+See [the desensitized sample](skills/startup-meeting-minutes/assets/example-minutes.json) for the full structure.
 
 ### Technology research
 
