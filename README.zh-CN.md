@@ -11,6 +11,7 @@
 | --- | --- | --- | --- |
 | `tech-research-deck` | 定义并组织技术研究 | 架构、路线、案例、趋势 | 有来源支撑的研究叙事 |
 | `huawei-insight-deck` | 将判断转化为一致页面 | 汇报材料、单页、成稿制作 | 经渲染检查的可编辑 PPT |
+| `startup-meeting-minutes` | 将交流转写整理成结论前置的纪要 | 初创公司、高校专家技术交流 | 会议纪要 + Outlook 邮件草稿 |
 
 `tech-research-deck` 负责研究问题、证据、技术架构、路线、案例和趋势，适合从问题尚未定型、材料仍需核验的阶段开始工作。
 `huawei-insight-deck` 负责把已经形成的判断转成结构一致、可编辑、适合领导(尤其是华子领导）阅读的PPT页面。两项技能可以单独使用，也可以串联完成从研究形成到演示交付的完整任务。
@@ -206,6 +207,11 @@ lex-ai-research-skills/
     │   ├── assets/  # 官方来源清单与示例内容
     │   ├── references/
     │   └── scripts/
+    ├── startup-meeting-minutes/
+    │   ├── SKILL.md
+    │   ├── agents/
+    │   ├── assets/  # 纪要 JSON 示例
+    │   └── scripts/  # Outlook 邮件生成脚本
     └── tech-research-deck/
         ├── SKILL.md
         ├── agents/

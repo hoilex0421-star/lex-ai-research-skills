@@ -12,6 +12,7 @@ A library of reusable Codex skills for industrial research, technology analysis,
 | --- | --- | --- | --- |
 | `tech-research-deck` | Frames and structures technology research. | Architectures, routes, cases, and trends. | A source-aware, slide-ready research narrative. |
 | `huawei-insight-deck` | Turns established judgments into consistent pages. | Executive decks, one-pagers, and page production. | An editable 16:9 PowerPoint deck with render QA. |
+| `startup-meeting-minutes` | Turns startup/expert meeting transcripts into conclusion-first minutes. | Technical exchanges with startups and university experts. | Chinese meeting minutes plus an Outlook-ready email draft. |
 
 `tech-research-deck` is responsible for the research question, evidence, architecture, routes, cases, and trends. `huawei-insight-deck` is responsible for turning an established argument into consistent, editable pages designed for executive reading. Each skill can be used on its own, or they can be chained when a task needs both research development and presentation production.
 
@@ -201,6 +202,11 @@ lex-ai-research-skills/
     │   ├── assets/  # Official-source manifest and example content
     │   ├── references/
     │   └── scripts/
+    ├── startup-meeting-minutes/
+    │   ├── SKILL.md
+    │   ├── agents/
+    │   ├── assets/  # Example minutes spec
+    │   └── scripts/  # Outlook email builder
     └── tech-research-deck/
         ├── SKILL.md
         ├── agents/
