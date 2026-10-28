@@ -1,0 +1,4 @@
+interface:
+  display_name: "Startup Meeting Minutes"
+  short_description: "把初创/专家交流转写整理成结论前置的会议纪要，可输出Outlook邮件版"
+  default_prompt: "Use $startup-meeting-minutes to turn this meeting transcript and my notes into meeting minutes."
